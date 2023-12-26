@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor-acordeon {
+    /* Mi codigo */
+    display: inline-block;
+    /* Mi codigo */
+    width: 100%;
+    max-width: 800px;
+    margin: 80px 20px 0 auto;
+    margin-top: 80px;
+}
+
+.contenedor-acordeon h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.acordeon {
+    background: #fff;
+}
+
+.acordeon label {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background: #1c1c1c;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 300ms ease;
+}
+
+.acordeon label:hover {
+    background: #2e2e2e;
+}
+
+.acordeon .contenido-acordeon {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.btn-acordeon:checked~.contenido-acordeon {
+    max-height: 600px;
+    padding: 15px 0px;
+}
+
+.btn-acordeon {
+    display: none;
+}
+
+body {
+
+    background-color: #0c192c;
+}
+
+.imagen-container {
+    
+    text-align: center;
+    /* Para centrar la imagen horizontalmente */
+    margin-top: 50px;
+    /* Ajusta según sea necesario para la separación vertical */
+
+    /* Mi codigo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    /* Mi codigo */
+}
+
+img {
+    display: block;
+    /* Mi codigo */
+    display: inline-block;
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente */
+    margin-bottom: 0px;
+}
+/* Lucesitas */
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Mi codigo */
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+    /* Mi codigo */
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    /* Mi codigo */
+    position: absolute;
+    top: 0;
+    /* Mi codigo */
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
