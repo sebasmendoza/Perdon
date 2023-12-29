@@ -1,0 +1,93 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color: black;
+}
+
+@font-face {
+    font-family: neon;
+
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.neon {
+    font-family: neon;
+    color: #fb4264;
+    text-shadow: 0 0 3vw #fb4264;
+    font-size: 9vw;
+
+}
+
+.luz {
+    font-family: neon;
+    color: #426dfb;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #426dff;
+}
+
+.nombre{
+    font-family: neon;
+    color:greenyellow;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw greenyellow;
+}
+
+.neon{
+    animation: neon 2s ease infinite;
+    -moz-animation: neon 2s ease infinite;
+    -webkit-animation: neon 2s ease infinite;
+}
+.luz{
+    animation: luz 1.5s ease infinite;
+    -moz-animation: luz 1.5s ease infinite;
+    -webkit-animation: luz 1.5s ease infinite;
+}
+.nombre{
+    animation: nombre 1s ease infinite;
+    -moz-animation: nombre 1s ease infinite;
+    -webkit-animation: nombre 1s ease infinite;
+}
+
+@keyframes neon{
+    0%,100%{
+        text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,0 0 10vw #fa1c16, 0 0 .4vw #fed128, .5vw .5vw 1vw #806914;
+        color: #fed128;
+    }
+    50%{
+        text-shadow: 0 0 .5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b, 0 0 5vw #800e0b, 0 0 .2vw #800e0b, .5vw .5vw 1vw #806914;
+        color: #806914;
+    }
+}
+
+@keyframes luz{
+    0%,100%{
+        text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,0 0 10vw #1041ff, 0 0 .4vw #8bfdfe, .5vw .5vw 1vw #147280;
+        color: #28d7fe;
+    }
+    50%{
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw 1vw #033940;
+        color: #146c80;
+    }
+}
+@keyframes nombre{
+    0%,100%{
+        text-shadow: 0 0 1vw #6ded46, 0 0 3vw #34f73a, 0 0 10vw #6ded46,0 0 10vw #37f156, 0 0 .4vw #08f537, .5vw .5vw 1vw #05fd06;
+        color: green;
+    }
+    50%{
+        text-shadow: 0 0 .5vw #2a722b, 0 0 1.5vw #1d511c, 0 0 5vw #2a722b, 0 0 5vw #2a722b, 0 0 .2vw #1d511c, .5vw .5vw 1vw #1d511c;
+        color: green;
+    }
+}
